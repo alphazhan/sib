@@ -128,9 +128,9 @@
 		<NavLi>
 			<button onclick={toggleDarkMode} class="flex items-center" aria-label="Toggle dark mode">
 				{#if settings.darkMode}
-					<SunOutline class="h-5 w-5" />
-				{:else}
 					<MoonOutline class="h-5 w-5" />
+				{:else}
+					<SunOutline class="h-5 w-5" />
 				{/if}
 			</button>
 		</NavLi>
