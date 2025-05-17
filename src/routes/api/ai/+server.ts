@@ -1,10 +1,10 @@
 import { error, json } from '@sveltejs/kit';
 import OpenAI from 'openai';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { VITE_OPENAI_API_KEY, VITE_GEMINI_API_KEY } from '$env/static/private';
+import { OPENAI_API_KEY, GEMINI_API_KEY } from '$env/static/private';
 
-const openai_client = new OpenAI({ apiKey: VITE_OPENAI_API_KEY });
-const gemini_client = new GoogleGenerativeAI(VITE_GEMINI_API_KEY);
+const openai_client = new OpenAI({ apiKey: OPENAI_API_KEY });
+const gemini_client = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 function getPrompt(data: any) {
 	return `
